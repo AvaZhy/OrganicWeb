@@ -49,6 +49,37 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: 100px;
+
+    &__image {
+        position: absolute;
+    }
+
+    &__tomato {
+        right: 111px;
+        bottom: 31px;
+    }
+
+    &__avocado {
+        right: -24px;
+        top: 44px;
+    }
+
+    &__cucumber {
+        top: 0;
+        left: 684px;
+    }
+
+    &__pepper {
+        top: 395px;
+        left: 32px;
+    }
+
+    &__beans {
+        left: -5px;
+        bottom: 68px;
+    }
 }
 
 .main {
@@ -71,6 +102,7 @@ body {
         border: 1px solid rgba($gray, $alpha);
         border-radius: 100%;
         padding: 53px;
+        position: relative;
 
         &__image {
             border: 1px solid rgba($gray, $alpha);
@@ -80,6 +112,70 @@ body {
             img {
                 border-radius: 100%;
                 box-shadow: 15px 48px 42px 0px rgba($gray, $alpha);
+            }
+        }
+
+        &__btn {
+            background-color: transparent;
+            border: none;
+            color: rgba($gray, 0.8);
+            text-align: left;
+            position: absolute;
+
+            span {
+                color: rgba($gray, 1);
+                display: block;
+                margin-top: 6px;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                width: 11px;
+                height: 11px;
+                border-radius: 100%;
+                background-color: $gray;
+                box-shadow: 0 0 0 4px $white, 0 0 0 5px $gray;
+                position: absolute;
+            }
+
+            &:focus {
+                outline: none;
+
+                &::before {
+                    background-color: $orange;
+                    box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+                }
+            }
+        }
+
+        &__01 {
+            left: 58px;
+            top: 45px;
+
+            &::before {
+                left: 91px;
+                top: 22px;
+            }
+        }
+
+        &__02 {
+            right: -5px;
+            top: 191px;
+
+            &::before {
+                right: 93px;
+                top: 18px;
+            }
+        }
+
+        &__03 {
+            right: 236px;
+            bottom: -47px;
+
+            &::before {
+                right: 37px;
+                bottom: 56px;
             }
         }
     }
